@@ -27,7 +27,7 @@ class LoadingWindow(QtWidgets.QDialog):
             base_dir = os.path.dirname(os.path.abspath(__file__))
         icon_path = os.path.join(base_dir, "assets", "icon.png")
         self.movie = QtGui.QMovie(icon_path)
-        self.movie.setScaledSize(QtCore.QSize(128, 128))
+        self.movie.setScaledSize(QtCore.QSize(64, 64))
 
         self.label = QtWidgets.QLabel(self)
         self.label.setMovie(self.movie)
@@ -81,7 +81,6 @@ class MainWindow(QtWidgets.QMainWindow):
 
 
 if __name__ == "__main__":
-    # ... (checksum verification logic as before)
 
     app = QtWidgets.QApplication(sys.argv)
     loading_window = LoadingWindow()
